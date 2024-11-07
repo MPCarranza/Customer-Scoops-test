@@ -1,5 +1,8 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "./", // Si usas rutas relativas, esto puede ayudar
+  root: ".", // Asegúrate de que apunte a la raíz del proyecto
+  build: {
+    outDir: "dist", // La carpeta de salida que Vercel utilizará para el despliegue
+  },
 });
