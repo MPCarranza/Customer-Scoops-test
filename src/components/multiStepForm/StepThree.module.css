@@ -1,0 +1,129 @@
+.stepThreeContent {
+    text-align: left;
+    padding: 20px;
+}
+
+.optionsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 20px;  /* Asegúrate de que haya espacio entre las opciones */
+    margin-top: 20px;
+}
+
+.optionButton {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #231331;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 11px;
+    color: #231331;
+    transition: background-color 0.3s ease;
+    gap: 10px;
+    min-width: 200px; /* Aseguramos un tamaño mínimo */
+}
+
+.optionButton:hover {
+    background-color: #f0f0f0;
+}
+
+.optionLetter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px; /* Ajustamos el tamaño */
+    height: 30px; /* Ajustamos el tamaño */
+    border-radius: 50%;
+    background-color: #00CCBC; /* Fondo oscuro */
+    color: white;
+    font-weight: bold;
+    font-size: 16px; /* Ajusta el tamaño de la letra */
+}
+
+.optionText {
+    font-size: 14px;
+    flex: 1; /* Hace que el texto ocupe el espacio restante */
+}
+
+.nextButton {
+    background-color: #231331;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    width: 40%;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.backButton {
+    padding: 10px;
+    border-radius: 100px;
+    border: 1px solid #231331;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.backButton:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo suave en hover */
+}
+
+.backIcon {
+    font-size: 16px;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 10px;
+}
+
+/* MEDIA QUERIES PARA ADAPTACIÓN RESPONSIVA */
+
+/* Para pantallas pequeñas (dispositivos móviles) */
+@media (max-width: 768px) {
+    .optionsContainer {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+
+    .optionButton {
+        font-size: 14px; /* Aumentamos el tamaño de la fuente en móviles */
+        min-width: 100%; /* Hacemos que el botón ocupe todo el ancho disponible */
+    }
+
+    .nextButton {
+        width: 80%; /* El botón ocupará más ancho en pantallas pequeñas */
+    }
+
+    .buttonContainer {
+        flex-direction: column; /* Los botones estarán uno debajo del otro */
+        width: 100%;
+    }
+
+    .backButton {
+        width: 100%; /* El botón de "Atrás" ocupará todo el ancho disponible */
+    }
+}
+
+/* Para pantallas más pequeñas que 480px */
+@media (max-width: 480px) {
+    .optionButton {
+        font-size: 16px; /* Aumentamos aún más el tamaño de la fuente en dispositivos muy pequeños */
+        padding: 12px; /* Aumentamos el padding para que el botón sea más fácil de interactuar */
+    }
+
+    .nextButton {
+        width: 90%; /* El botón "Siguiente" ocupa casi todo el ancho */
+    }
+
+    .backButton {
+        width: 90%; /* El botón "Atrás" también ocupará casi todo el ancho */
+    }
+}

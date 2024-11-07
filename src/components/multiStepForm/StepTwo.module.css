@@ -1,0 +1,100 @@
+.stepTwoContent {
+  text-align: left;
+  padding: 20px;
+}
+
+.optionsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.optionButton {
+  width: 130px;
+  padding: 10px;
+  border: 1px solid #231331;
+  border-radius: 50px;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #231331;
+  transition: background-color 0.3s ease;
+}
+
+.optionButton:hover {
+  background-color: #f0f0f0;
+}
+
+.nextButton {
+  background-color: #231331;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 100px;
+  width: 40%;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.backButton {
+  padding: 10px;
+  border-radius: 100px;
+  border: 1px solid #231331;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.backButton:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Fondo suave en hover */
+}
+
+.backIcon {
+  font-size: 16px;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .optionsContainer {
+    grid-template-columns: repeat(2, 1fr); /* Ajustar a dos columnas */
+  }
+
+  .optionButton {
+    width: 100%; /* Hacer los botones más grandes en pantallas más pequeñas */
+  }
+
+  .nextButton {
+    width: 60%; /* Aumentar el ancho del botón "Siguiente" en pantallas pequeñas */
+  }
+
+  .buttonContainer {
+    flex-direction: column; /* Los botones de navegación se apilan verticalmente */
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .optionsContainer {
+    grid-template-columns: 1fr; /* Una sola columna en pantallas muy pequeñas */
+  }
+
+  .optionButton {
+    width: 100%; /* Botones de ancho completo */
+  }
+
+  .nextButton {
+    width: 80%; /* Botón de siguiente más grande en pantallas muy pequeñas */
+  }
+}

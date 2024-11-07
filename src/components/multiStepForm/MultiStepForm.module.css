@@ -1,0 +1,289 @@
+/* Contenedor principal del formulario */
+.formContainer {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Barra de progreso */
+  .progressBarContainer {
+    height: 5px;
+    background-color: #e0e0e0;
+    overflow: hidden; /* Asegura que el progreso no se desborde */
+  }
+  
+  .progressBar {
+    height: 100%;
+    background-color: #231331; /* Color de la barra de progreso */
+    width: 0%; /* Valor inicial en 0% */
+    transition: width 0.3s ease; /* Animación suave al cambiar el ancho */
+  }
+  
+  /* Contenedor de columnas */
+  .columns {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Columna izquierda (pasos) */
+  .leftColumn {
+    flex: 1;
+  }
+  
+  /* Columna derecha (imagen) */
+  .rightColumn {
+    flex: 1;
+    width: 635px;
+    height: 655px;
+    background: linear-gradient(283.73deg, #231331 -29.4%, #00CCBC 50.02%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    overflow: hidden;
+    position: relative; /* Permite posicionar elementos hijos absolutamente */
+  }
+  
+  /* Centra el contenido de la columna izquierda */
+  .stepContentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: left;
+    padding: 20px;
+    margin-left: 160px;
+    margin-right: 160px;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 123px;
+    left: 170px;
+    width: 113px;
+    height: 41.18px;
+  }
+  
+  /* Texto introductorio */
+  .introContent p {
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+  
+  /* Estilo del input con borde inferior */
+  .nameInput {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #d8d8d8;
+    padding: 8px 0;
+    margin: 15px 0;
+    outline: none;
+    font-size: 13px;
+    color:#333;
+  }
+  
+  /* Botón de inicio para el primer paso */
+  .startButton {
+    background-color: #231331;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    width: 40%;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  
+  /* Botones de navegación */
+  .buttonContainer button {
+    background-color: #00CCBC;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  /* Contador de pasos en la esquina superior derecha */
+  .stepCounter {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: large;
+    color: #231331;
+    /* Color blanco para que contraste */
+  }
+  
+  .currentStep {
+    color: #231331;
+    font-size: large;
+  }
+  
+  .totalSteps {
+    color: #231331;
+    font-size: small;
+  }
+  
+  /* Imagen ajustada dentro del contenedor */
+  .image {
+    width: 65%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 100px;
+  }
+  
+  /* Contenedor de botones */
+  .buttonContainer {
+    margin-top: 20px;
+  }
+  
+  /* Diseño responsivo */
+  @media (max-width: 1024px) {
+    /* Cambiar la dirección de las columnas en tabletas */
+    .columns {
+      flex-direction: column-reverse;
+    }
+  
+    .rightColumn {
+      width: 100%; /* La imagen ocupa todo el ancho */
+      height: auto; /* Ajustar la altura automáticamente */
+      border-radius: 0; /* Eliminar bordes redondeados en pantallas pequeñas */
+    }
+  
+    /* Centrar el contenido de la columna izquierda */
+    .stepContentContainer {
+      margin-left: 20px;
+      margin-right: 20px;
+      padding: 15px;
+      text-align: center; /* Asegurar que el texto esté centrado */
+    }
+  
+    .logo {
+      position: static; /* Ajuste la posición del logo */
+      margin: 20px auto;
+    }
+  
+    /* Ajustar el tamaño de los botones */
+    .startButton {
+      width: 60%;
+      padding: 15px 25px;
+    }
+  
+    .buttonContainer button {
+      width: 90%; /* Los botones ocupan más espacio */
+      padding: 12px 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Cambiar la dirección de las columnas */
+    .columns {
+      flex-direction: column-reverse;
+    }
+  
+    .rightColumn {
+      width: 100%;
+      height: auto;
+    }
+  
+    .stepContentContainer {
+      padding: 10px;
+      margin-left: 0;
+      margin-right: 0;
+      text-align: center; /* Centrado en dispositivos pequeños */
+    }
+  
+    .logo {
+      width: 80%; /* El logo se ajusta al 80% */
+      margin: 10px auto; /* Centramos el logo */
+    }
+  
+    .startButton {
+      width: 80%;
+      padding: 12px 20px;
+    }
+  
+    .buttonContainer button {
+      width: 100%;
+      padding: 10px 18px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Para dispositivos móviles */
+    .columns {
+      flex-direction: column-reverse;
+    }
+  
+    .rightColumn {
+      width: 100%;
+      height: 200px; /* Ajustar la altura de la imagen */
+      border-radius: 0;
+    }
+  
+    .stepContentContainer {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 10px;
+    }
+  
+    .logo {
+      width: 60%; /* Ajustar el logo al 60% */
+      margin: 0 auto;
+    }
+  
+    .startButton {
+      width: 100%;
+      padding: 12px 0;
+    }
+  
+    .buttonContainer button {
+      width: 100%;
+      padding: 10px 20px;
+    }
+  }
+  
+  /* Estilo del botón de opción */
+  .optionButton {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #fff;
+    border: 2px solid #00CCBC;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  .optionButton:hover {
+    background-color: #e0f7fa;
+  }
+  
+  /* Círculo alrededor de la letra */
+  .optionLetter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00CCBC;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* Texto de la opción */
+  .optionText {
+    font-size: 14px;
+    color: #231331;
+  }
+  

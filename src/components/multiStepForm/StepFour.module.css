@@ -1,0 +1,113 @@
+.stepFourContent {
+    text-align: left;
+    padding: 20px;
+}
+
+.optionsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.optionButton {
+    width: 130px;
+    padding: 10px;
+    border: 1px solid #231331;
+    border-radius: 50px;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #231331;
+    transition: background-color 0.3s ease;
+}
+
+.optionButton:hover {
+    background-color: #f0f0f0;
+}
+
+.nextButton {
+    background-color: #231331;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    width: 40%;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.backButton {
+    padding: 10px;
+    border-radius: 100px;
+    border: 1px solid #231331;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.backButton:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo suave en hover */
+}
+
+.backIcon {
+    font-size: 16px;
+}
+
+/* MEDIA QUERIES PARA ADAPTACIÓN RESPONSIVA */
+
+/* Para pantallas de tamaño medio (tabletas y dispositivos con pantallas más pequeñas) */
+@media (max-width: 768px) {
+    .optionsContainer {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+
+    .optionButton {
+        font-size: 12px; /* Reducimos el tamaño de la fuente en pantallas más pequeñas */
+        width: 100%; /* Los botones ocupan todo el ancho disponible */
+    }
+
+    .nextButton {
+        width: 80%; /* El botón "Siguiente" ocupa un mayor ancho */
+    }
+
+    .buttonContainer {
+        flex-direction: column; /* Los botones estarán uno debajo del otro */
+        width: 100%;
+    }
+
+    .backButton {
+        width: 100%; /* El botón "Atrás" ocupará todo el ancho disponible */
+    }
+}
+
+/* Para pantallas muy pequeñas (teléfonos móviles) */
+@media (max-width: 480px) {
+    .optionsContainer {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas muy pequeñas */
+    }
+
+    .optionButton {
+        font-size: 14px; /* Aumentamos ligeramente el tamaño de la fuente */
+        padding: 12px; /* Aumentamos el padding para mejorar la interacción en móviles */
+    }
+
+    .nextButton {
+        width: 90%; /* El botón "Siguiente" ocupa casi todo el ancho */
+    }
+
+    .backButton {
+        width: 90%; /* El botón "Atrás" también ocupa casi todo el ancho */
+    }
+}

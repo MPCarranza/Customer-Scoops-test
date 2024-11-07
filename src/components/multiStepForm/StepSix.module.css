@@ -1,0 +1,31 @@
+.stepSixContent {
+    text-align: left;
+    height: 100%; /* Asegura que ocupe toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+  
+  .formContainer {
+    background: linear-gradient(283.73deg, #231331 -29.4%, #00CCBC 50.02%);
+  }
+  
+  .buttonContainer {
+    display: flex;
+    gap: 10px;
+  }
+  
+
+  .finishButton {
+    background-color: #231331;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    width: 40%;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  
